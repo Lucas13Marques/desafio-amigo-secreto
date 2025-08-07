@@ -1,6 +1,16 @@
 let amigos = [];
 
- 
+
+function exibirAmigos(){ 
+    let lista = document.getElementById('listaAmigos');
+        lista.innerHTML = '';
+
+    for( let i = 0;i < amigos.length; i++ ){ 
+        let item = document.createElement('li');
+        item.textContent = amigos[i];
+        lista.appendChild(item);
+       
+    }}
 
 function adicionarAmigo() { 
 
@@ -13,6 +23,8 @@ function adicionarAmigo() {
 amigos.push(digitAmigo);
 
 console.log(amigos);
+exibirAmigos() ;   
+
     }
 limparcampos();}
 
@@ -24,3 +36,4 @@ function limparcampos() {
 }
 
 
+ 
