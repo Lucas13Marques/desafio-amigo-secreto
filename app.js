@@ -1,14 +1,26 @@
 let amigos = [];
 
+ 
+
 function adicionarAmigo() { 
 
     if (document.querySelector('input').value == ''){
-        alert('Digite um valor válido')
+        alert('Por favor, insira um nome.')
 
     }else{
-    let digitAmigo  = document.querySelector('input').value
+    let digitAmigo  = document.querySelector('input').value;
 
-amigos.push(digitAmigo)
+amigos.push(digitAmigo);
 
-console.log(amigos)
-    }}
+console.log(amigos);
+    }
+limparcampos();}
+
+
+    
+function limparcampos() { 
+    chute = document.querySelector('input');
+    chute.value = '';
+}
+
+
