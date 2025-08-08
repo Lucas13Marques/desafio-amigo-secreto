@@ -53,9 +53,18 @@ limparcampos();}
 
 // Função para limpar o campo de entrada do usuário
 function limparcampos() { 
-    digitAmigo = document.querySelector('input');
+   let digitAmigo = document.querySelector('input');
     digitAmigo.value = '';
 }
-
-
  
+ function sortearAmigo(){
+    if( amigos == '' ){ 
+        alert('Sua lista está vazia, preencha um nome')
+        return
+    }
+    let amigoSorteado = Math.floor(Math.random() * amigos.length);
+     alert('Amigo sorteado: ' +   amigos[amigoSorteado]);
+       
+ 
+
+ } 
