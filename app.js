@@ -19,7 +19,7 @@ function exibirAmigos(){
         item.textContent = amigos[i];
 
 // Adiciona o <li> ao <ul>
-        lista.appendChild(item);
+        lista.appendChild(item); 
        
     }}
 
@@ -35,6 +35,7 @@ function adicionarAmigo() {
 
 // Captura o valor digitado no campo <input>
     }else{
+       
     let digitAmigo  = document.querySelector('input').value;
 
 amigos.push(digitAmigo);
@@ -59,12 +60,26 @@ function limparcampos() {
  
  function sortearAmigo(){
     if( amigos == '' ){ 
+        //Alerta para caso tentem sortear amigos sem incluir ninguem na lista
         alert('Sua lista está vazia, preencha um nome')
         return
     }
     let amigoSorteado = Math.floor(Math.random() * amigos.length);
-     alert('Amigo sorteado: ' +   amigos[amigoSorteado]);
-       
- 
+    let Result = document.getElementById('resultado');
 
+//Deixa em branco qualquer texto interno no elemento
+        Result.innerHTML = '';
+
+//Cria loop com for, cria a variavel, adiciona condicional e adiciona valor a variavel 1 para finalizar o loop 
+   let element = document.createElement('li');
+
+// Define o texto do <li> como o nome do amigo atual
+        element.textContent = 'O amigo sorteado foi: ' + amigos[amigoSorteado];
+
+// Adiciona o <li> ao <ul>
+        Result.appendChild(element);
+    
+     amigos = [];
+    exibirAmigos();
+       
  } 
