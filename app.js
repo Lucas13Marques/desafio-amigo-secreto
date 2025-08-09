@@ -19,7 +19,8 @@ function exibirAmigos(){
         item.textContent = amigos[i];
 
 // Adiciona o <li> ao <ul>
-        lista.appendChild(item); 
+        lista.appendChild(item);
+    document.getElementById('resultado').innerHTML = '';
        
     }}
 
